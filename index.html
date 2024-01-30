@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="Página que contiene un breve instructivo sobre cómo utilizar css">
+    <meta http-equiv="X-UA-Compatible" content="chrome">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/style.css">
+    <title>Instructivo CSS</title>
+</head>
+<body>
+
+    <h1>Instructivo de CSS</h1>
+
+    <h2>Texto de ejemplo</h2>
+    <p class="parrafo-1">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Suscipit quam sed adipisci, tenetur alias consequuntur. Alias, voluptas nostrum soluta iusto commodi error officia aut accusamus distinctio, omnis quia, dolores modi.</p>
+
+    <p class="parrafo-2">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Cumque quaerat non eaque expedita? Laudantium reprehenderit fugiat nostrum dicta rerum quidem blanditiis aut non tempora sed ducimus quia, corporis unde dolores?</p>
+
+    <p class="parrafo-3">Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem iure magni doloribus eligendi aliquid culpa, ullam illo molestiae et facere. Veritatis dicta rerum repellat consequatur deserunt facere minima? Eveniet, praesentium.</p>
+
+    <div class="div-principal">
+        <h3 class="titulo3">Título del div principal</h3>
+        <div class="div-1">Divisor 1</div>
+        <div class="div-2">Divisor 2</div>
+        <div class="div-3">Divisor 3</div>
+    </div>
+
+    <h2>Terminología</h2>
+
+    <dl>
+        <dt><b>Selector</b></dt>
+        <dd>Es el elemento al cual vamos a aplicar el estilo</dd>
+        <dt><b>Propiedad</b></dt>
+        <dd>lo que vamos a cambiar del selector</dd>
+        <dt><b>Valor</b></dt>
+        <dd>Es el nuevo valor que va a tener el selector</dd>
+        <dt><b>Propiedad:Valor</b></dt>
+        <dd>Se denomina declaración </dd>
+        <dt><b>Regla</b></dt>
+        <dd>Es el conjunto de selector + declaración o declaraciones</dd>
+      </dl>
+
+      <p>Ejemplo</p>
+
+      <pre>
+        selector{
+            propiedad1:valor;
+            propiedad2: valor;
+            propiedad3: valor
+        }
+      </pre>
+
+      <h2>Tipos de selectores</h2>
+
+      <h3>Selectores Simples</h3>
+      <ul>
+        <li>selectores elementales</li>
+        <ul>
+            <li>Selector universal: <pre>*{
+    propiedad1:valor;
+}</pre></li>
+            <li>Selector de Etiqueta: <pre>nombre-etiqueta{
+    propiedad1:valor;
+}</pre></li>
+        </ul>
+
+        <li>selectores de atributo</li>
+        <ul>
+            <li>id <pre>#valor-id{
+    propiedad1:valor;
+}</pre></li>
+            <li>clase <pre>.valor-clase{
+    propiedad1:valor;
+}</pre></li>
+            <li>otros atributos <pre>[atributo]{
+    propiedad:valor;    
+}</pre>
+<pre>[atributo=valor]{
+    propiedad:valor;    
+}</pre><pre>[href="https://google.com"]{
+    propiedad:valor;    
+}</pre></li>
+        </ul>
+      </ul>
+
+      <p>otras variables de este selector son:</p>
+      <pre>
+        [atributo^="valor"]{
+            propiedad:valor;
+        }
+        <p><b>^</b> busca coincidencias en el valor del atributo que comiencen con un nombre específico</p>
+      </pre>
+
+      <pre>
+        [atributo*="valor"]{
+            propiedad:valor;
+        }
+        <p><b>*</b> busca coincidencias en el valor del atributo que contengan un nombre específico</p>
+      </pre>
+      
+      <pre>
+        [atributo$="valor"]{
+            propiedad:valor;
+        }
+        <p><b>$</b> busca coincidencias en el valor del atributo que finalice con un nombre específico</p>
+      </pre>
+      
+
+      <h2>Selectores Compuestos</h2>
+      <ul>
+        <li>selectores agrupados</li>
+        <pre>
+            .div-1, .div-2, .div-3{
+                propiedad:valor;
+            }
+        </pre>
+
+        <pre>
+            h1, h2{
+                propiedad:valor;
+            }
+        </pre>
+
+        <li>selectores combinadores</li>
+
+        <ul>
+            <li>Selector descendiente (hijo)</li>
+            <p>Se coloca la etiqueta que contenedora, espacio, y la etiqueta contenida (padre - hijo)</p>
+            <pre>
+                div .titulo3{
+                    proiedad:valor;
+                }
+            </pre>
+
+            <li>Selector hijo directo</li>
+            <p>Se coloca la etiqueta que contenedora, espacio, y la etiqueta contenida </p>
+            <pre>
+                div > div{
+                    proiedad:valor;
+                }
+            </pre>
+
+            <li>Selector de mismo nivel (hermano)</li>
+            <p>con '+' solo se puede seleccionar al inmediatamente siguiente </p>
+            <pre>
+                .parrafo-2 + parrafo-3{
+                    propiedad:valor;
+                }
+            </pre>
+            <p>con '~' se pueden seleccionar todos los hermanos</p>
+            <pre>
+                h2 ~ p{
+                    propiedad:valor;
+                }
+            </pre>
+            
+        </ul>
+        
+        <li>Pseudoclases - Pseudoelementos</li>
+      </ul>
+
+    
+    <h2>Especificidad</h2>
+
+    <ul>
+        <li>etiquetas y Pseudoelementos: 0,0,1</li>
+        <li>clases, atributos y pseudoeclases: 0,1,0</li>
+        <li>id: 1,0,0</li>
+        <li>estilos en linea 1,0,0,0</li>
+        <li>!important: le gana a todos</li>
+    </ul>
+
+    <h2>Valores de las propiedades</h2>
+
+    <dl>
+        <dt><b>inherit</b></dt>
+        <dd>hereda el estilo del padre</dd>
+        <dt><b>initial</b></dt>
+        <dd>evita que se realicen cambios del padre, lo deja con los valores iniciales</dd>
+        <dt><b>Valor</b></dt>
+        <dd>Es el nuevo valor que va a tener el selector</dd>
+        <dt><b>Propiedad:Valor</b></dt>
+        <dd>Se denomina declaración </dd>
+        <dt><b>Regla</b></dt>
+        <dd>Es el conjunto de selector + declaración o declaraciones</dd>
+      </dl>
+
+
+
+    <p>&lt; <b> </b> &gt;   &lt; / <b> </b> &gt;</p> 
+
+
+  
+  
+    
+</body>
+</html>

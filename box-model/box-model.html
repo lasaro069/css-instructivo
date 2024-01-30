@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=chrome">
+    <meta name="description" content="Cómo funciona el box model">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/box-model/style-dist.css">
+    <title>Width & height</title>
+</head>
+<body>
+    <h1>Box Model</h1>
+
+    <h2>Elementos de Bloque</h2>
+    <div class="block1">
+        <h3>margen</h3>
+        <ul>
+            <li>Podemos aplicar margen a los 4 lados </li>
+            <li>podemos aplicar margen automático</li>
+            <li>con <i>'margin-left:auto'</i>el elemento se desplaza todo a la derecha</li>
+            <li>para ello, el bloque debe tener un ancho determinado</li>
+            <li>con <i>margin-left: auto</i> y <i>margin-right:auto</i>podemos centrar la caja</li>
+        </ul>
+
+    </div>
+
+    <div class="block2">
+        <h3>padding</h3>
+        <ul>
+            <li>Podemos aplicar padding a los 4 lados </li>
+            <li>podemos aplicar padding automático</li>
+            <li>con <i>'margin-left:auto'</i>el elemento se desplaza todo a la derecha</li>
+            <li>para ello, el bloque debe tener un ancho determinado</li>
+            <li>con <i>margin-left: auto</i> y <i>margin-right:auto</i>podemos centrar la caja</li>
+        </ul>
+
+    </div>
+
+    <div class="block3">
+        <h3>Bloque 3</h3>
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Alias ipsa aperiam numquam dolorem magnam est doloremque vel repudiandae officiis temporibus sunt expedita eligendi voluptate modi, at nam voluptatem aut culpa!</p>
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Alias ipsa aperiam numquam dolorem magnam est doloremque vel repudiandae officiis temporibus sunt expedita eligendi voluptate modi, at nam voluptatem aut culpa!</p>
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Alias ipsa aperiam numquam dolorem magnam est doloremque vel repudiandae officiis temporibus sunt expedita eligendi voluptate modi, at nam voluptatem aut culpa!</p>
+    </div>
+    <br>
+
+    <div class="block5">
+        <h3>Bloque 5</h3>
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Alias ipsa aperiam numquam dolorem magnam est doloremque vel repudiandae officiis temporibus sunt expedita eligendi voluptate modi, at nam voluptatem aut culpa!</p>
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Alias ipsa aperiam numquam dolorem magnam est doloremque vel repudiandae officiis temporibus sunt expedita eligendi voluptate modi, at nam voluptatem aut culpa!</p>
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Alias ipsa aperiam numquam dolorem magnam est doloremque vel repudiandae officiis temporibus sunt expedita eligendi voluptate modi, at nam voluptatem aut culpa!</p>
+
+    </div>
+
+    <br>
+
+    <br>
+
+    <div class="block7">
+        <h3>Bloque 7</h3>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea pariatur repellat accusamus ut. Officiis explicabo cumque nobis itaque vel fuga, ab deserunt, eligendi rerum, obcaecati veritatis facere harum porro quidem! m dolor sit amet consectetur adipisicing elit. Ea pariatur repellat accusamus ut. Officiis explicabo cumque nobis itaque vel fuga, ab deserunt, eligendi rerum, obcaecati veritatis facere harum porro quidem!</p>
+        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Consectetur blanditiis modi vero praesentium aspernatur corrupti adipisci quasi nostrum doloribus, ullam itaque autem laborum necessitatibus quis sed aliquam, cupiditate omnis veniam!</p>
+        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nemo sunt doloribus beatae adipisci neque! Omnis magni ex, blanditiis excepturi nemo quidem natus fuga exercitationem pariatur ipsa? Ducimus quo vel obcaecati.</p>
+
+
+    </div>
+
+    <br>
+
+    <div class="block8">
+        <h3>Bloque 8</h3>
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Alias ipsa aperiam numquam dolorem magnam est doloremque vel repudiandae officiis temporibus sunt expedita eligendi voluptate modi, at nam voluptatem aut culpa!</p>
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Alias ipsa aperiam numquam dolorem magnam est doloremque vel repudiandae officiis temporibus sunt expedita eligendi voluptate modi, at nam voluptatem aut culpa!</p>
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Alias ipsa aperiam numquam dolorem magnam est doloremque vel repudiandae officiis temporibus sunt expedita eligendi voluptate modi, at nam voluptatem aut culpa!</p>
+    </div>
+
+
+    <div class="block9">
+        <h3>Bloque 9</h3>
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Alias ipsa aperiam numquam dolorem magnam est doloremque vel repudiandae officiis temporibus sunt expedita eligendi voluptate modi, at nam voluptatem aut culpa!</p>
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Alias ipsa aperiam numquam dolorem magnam est doloremque vel repudiandae officiis temporibus sunt expedita eligendi voluptate modi, at nam voluptatem aut culpa!</p>
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Alias ipsa aperiam numquam dolorem magnam est doloremque vel repudiandae officiis temporibus sunt expedita eligendi voluptate modi, at nam voluptatem aut culpa!</p>
+    </div>
+
+    <div class="div-inline">
+        <a href="#" class="inline">Elemento de Línea</a>
+    </div>
+
+    <p>los elementos de bloque pueden ser dimensionados con 'height' y 'width'</p>
+    <p>Los elementos de línea no pueden ser dimensionados. el contenido determina el tamaño</p>
+
+    <p>'box-sizing: border-box se utiliza para que la medida de la caja sea la medida dada en el heigth y width, manteniendo las prodiedades de border, padding y ajustando el alto y el ancho. esto puede aplicarse a todo el documento con un selector universal</p>
+    <pre>
+        *{
+            box-sizing:border-box;
+        }
+    </pre>
+
+    <p>display: Nos sirve para cambiar el contexto de los elementos del navegador, es decir, si tenemos elementos de bloque y de línea, podemos cambiar su comportamiento con esta propiedad</p>
+    
+</body>
+</html>

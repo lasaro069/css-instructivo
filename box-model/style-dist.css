@@ -1,0 +1,107 @@
+*{
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+}
+
+body{
+    background-color: #333;
+    color: #fff;
+}
+
+.block1{
+    background-color: purple;
+    width: 300px;
+    height: 250px;
+    margin-right: auto;
+    padding: 5px;
+    border-radius: 40px;
+}
+
+.block2{
+    background-color: silver;
+    width: 300px;
+    height: 350px;
+    margin-left: auto;
+    padding: 5px;
+    border: 15px solid red;
+    border-top-left-radius: 50px;
+    border-top-right-radius: 50px;
+    border-bottom-left-radius: 50px;
+   border-bottom-right-radius: 100px;
+}
+
+.block3{
+    background-color: cadetblue;
+    width: 300px;
+    height: 300px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 50px;
+    padding: 5px;
+    overflow: auto;
+}
+
+.block5{
+    background-color: cadetblue;
+    width: 300px;
+    height: 300px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 50px;
+    padding: 5px;
+    overflow-y: auto;
+}
+
+
+.block7{
+    background-color: cadetblue;
+    width: 300px;
+    height: 300px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 50px;
+    overflow: hidden;
+}
+
+.block7 p{
+    background-color: burlywood;
+    margin: 0;
+}
+
+
+.block8{
+    background-color: purple;
+    width: 300px;
+    height: 300px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 50px;
+    padding: 5px;
+    border-radius: 50%;
+    overflow-y: hidden;
+}
+
+.block9{
+    background-color:cornflowerblue;
+    width: 300px;
+    height: 500px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 200px;
+    -webkit-box-shadow: 10px 10px 20px 0px red, -10px -10px 20px 0px blue;
+            box-shadow: 10px 10px 20px 0px red, -10px -10px 20px 0px blue; /* elprimer valor es para el eje x, el segundo valor para el eje y el tercer valor es el difuminado y el cuarto valore es el ancho de la sombra*/
+
+}
+
+.div-inline{
+    background-color: azure;
+    height: 50px;
+    padding: 20px;
+    margin-top: 50px;
+}
+
+.inline{
+    background-color: lightcoral;
+    color: inherit;
+    padding: 10px;
+}
