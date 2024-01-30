@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="chrome">
+    <meta name="description" content="Descripción del uso de la propiedad position de css">    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/position.css">
+    <title>position en css</title>
+</head>
+<body>
+
+    <h1>position</h1>
+
+    <h2>realtive</h2>
+
+    <pre>
+        {
+            position: relative;
+            left: 100px;
+            top: 100px;
+        }
+    </pre>
+    <p>mueve un elemento pero sigue conservando el espacio inicial. se moverá en la dirección y distancia que indiquemos</p>
+
+
+    <div class="caja caja1">caja1</div>
+    <div class="caja caja2">caja2</div>
+    <div class="caja caja3">caja3</div>
+    <div class="caja caja4">caja4</div>
+    
+<br><br><br><br><br><br>
+
+    <h2>absolute</h2>
+
+    <pre>
+        {
+            position: absolute;
+            left: 100px;
+            top: 100px;
+        }
+    </pre>
+    <p>el elemento perderá sus medidas y su espacion reservado. Si lo movemos usará el elemtento posicionado contenedor como referencia. Si no lo hay, usará el elemento html de referencia </p>
+
+
+    <div class="box box1">caja5</div>
+    <div class="box box2">caja6</div>
+    <div class="box box3">caja7</div>
+    <div class="box box4">caja8</div>
+    
+</body>
+</html>
