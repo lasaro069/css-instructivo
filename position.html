@@ -1,18 +1,22 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="chrome">
-    <meta name="description" content="Descripción del uso de la propiedad position de css">    
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/position.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="chrome" />
+    <meta
+      name="description"
+      content="Descripción del uso de la propiedad position de css"
+    />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/position.css" />
     <title>position en css</title>
-</head>
-<body>
+  </head>
+  <body>
+    <header>
+      <h1>position</h1>
+    </header>
 
-    <h1>position</h1>
-
-    <h2>realtive</h2>
+    <h2>relative</h2>
 
     <pre>
         {
@@ -21,15 +25,17 @@
             top: 100px;
         }
     </pre>
-    <p>mueve un elemento pero sigue conservando el espacio inicial. se moverá en la dirección y distancia que indiquemos</p>
-
+    <p>
+      mueve un elemento pero sigue conservando el espacio inicial. se moverá en
+      la dirección y distancia que indiquemos
+    </p>
 
     <div class="caja caja1">caja1</div>
     <div class="caja caja2">caja2</div>
     <div class="caja caja3">caja3</div>
     <div class="caja caja4">caja4</div>
-    
-<br><br><br><br><br><br>
+
+    <br /><br /><br /><br /><br /><br />
 
     <h2>absolute</h2>
 
@@ -40,13 +46,117 @@
             top: 100px;
         }
     </pre>
-    <p>el elemento perderá sus medidas y su espacion reservado. Si lo movemos usará el elemtento posicionado contenedor como referencia. Si no lo hay, usará el elemento html de referencia </p>
+    <p>
+      el elemento perderá sus medidas y su espacion reservado. Si lo movemos
+      usará el elemtento posicionado contenedor como referencia. Si no lo hay,
+      usará el elemento html de referencia
+    </p>
+
+    <div class="box box1">caja1</div>
+    <div class="box box2">caja2</div>
+    <div class="cajita">
+      <div class="box box3">caja3</div>
+      <div class="box box4">caja4</div>
+    </div>
+
+    <br /><br /><br /><br /><br /><br />
+
+    <h2>fixed</h2>
+
+    <pre>
+        footer{
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+            height: 20px;
+            text-align: center;
+            }
+    </pre>
+    <p>
+      el elemento perderá sus medidas y su espacion reservado. Si lo movemos
+      usará el elemtento posicionado contenedor como referencia. Si no lo hay,
+      usará el elemento html de referencia. además, se quedará fijo en esa
+      posición aunque hagamos scroll. Fija el elemento en pantalla
+    </p>
+
+    <h2>sticky</h2>
+
+    <div>
+      <ul>
+        <li>
+          los valores <i>top, bottom, left, right</i> no sirven para mover el
+          elemento, son un punto de referencia donde queremos que el elemento
+          pase a tener un comportamiento similar al de 'fixed
+        </li>
+      </ul>
+
+      <pre>
+        {
+            position: sticky;
+            top: 0px;
+        }
+    </pre
+      >
+      <p></p>
+
+      <div class="cajita cajita1">cajita1</div>
+      <div class="cajita cajita2">cajita2</div>
+      <div class="cajita cajita3">cajita3</div>
+      <div class="cajita cajita4">cajita4</div>
+    </div>
+
+    <br /><br /><br /><br /><br /><br />
+
+    <h2>z-index</h2>
+
+    <p>
+      Es la propiedad que nos va a permitir ordenar los elementos que se
+      superponen
+    </p>
+
+    <ul>
+      <li>El número mayor del <i>z-index</i> es el que irá por encima</li>
+      <li><i>position</i> debe ser <i>relative</i></li>
+      <li>Evitar colocar números consecutivos. El código puede crecer y se necesitará modificar el <i>z-index</i></li>
+      <li>Utilizar números distanciados para permitir libertad de selección, puede ser de 10 en 10</li>
+      <li>El padre no puede ir por delante del hijo,el hijo puede ir detrás del padre</li>
+      <li> <i>z-index: -1</i> en el hijo y el padre no puede llevar <i>z-index</i> o debe estar en <i>auto</i></li>
+    </ul>
+
+    <pre>
+    {
+        position: relative;
+        z-index: 0;
+        }
+</pre
+    >
+    <p></p>
+
+    <div class="z-index z-index1">cajita1</div>
+    <div class="z-index z-index2">cajita2</div>
+    <div class="z-index z-index3">cajita3</div>
+    <div class="z-index z-index4">cajita4</div>
 
 
-    <div class="box box1">caja5</div>
-    <div class="box box2">caja6</div>
-    <div class="box box3">caja7</div>
-    <div class="box box4">caja8</div>
-    
-</body>
+
+
+    <h2>stacking context</h2>
+
+    <p>
+      Contexto de apilamiento. Es el espacio donde nuestros elementos se van a ir apilando para que unos queden detrás y otros delante
+    </p>
+    <p>De delante hacia atras:</p>
+
+    <ul>
+      <li>elementos posicionados con <i>z-index</i> de valor 1 o superior</li>
+      <li>elementos posicionados sin <i>z-index</i>  declarado o <i>auto</i></li>
+      <li>Elementos no posicionados</li>
+      <li>Elementos con <i>z-index</i> negativo</li>
+    </ul>
+
+
+
+    <footer>&copy Copyright - Luis Santos - 2024</footer>
+
+  </body>
 </html>
