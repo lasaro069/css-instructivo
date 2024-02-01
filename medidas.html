@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="chrome">
+    <meta name="description" content="Descripción sobre las medidas más usadas en CSS para estandarizar el sitio web">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/medidas.css">
+    <title>Medidas en CSS</title>
+</head>
+<body>
+
+    <h1>Medidas en CSS</h1>
+
+    <p>Podemos dividirlas en 2 grupos: medidas <i><b>absolutas</b></i> y medidas <i><b>realativas</b></i></p>
+
+    <h2>Medidas Absolutas</h2>
+    <p>No cambian, siempre mantendrán su tamaño independientemente del dispositivo o interacción que realice el usuario</p>
+    <ul>
+        <li>pixeles (px) = 1/96 de 1<i>in</i></li>
+        <li>centímetros (cm) = 96px /2,54 </li>
+    </ul>
+    
+
+    <h2>Medidas Relativas</h2>
+    <p>Siempre dependerán de un contexto.</p>
+    <p>Son las que se recomiendan utilizar en la gran mayoría de ocaciones porq ue permitirán que todos los elementos escalen proporcionalmente</p>
+    <p>Las más usadas son: <i>em , rem, %, vh (viewport higth), vw (viewport width) vmin, vmax</i></p>
+    <p>1 <i><b>rem</b></i> = 16px</p>
+    <p>1 <i><b>vh</b></i> = 1% del alto del viewport</p>
+    <p>1 <i><b>vw</b></i> = 1% del ancho de la pantalla</p>
+    <p>1 <i><b>vmin</b></i> = toma el 1% del valor del viewport que sea más pequeño</p>
+    <p>1 <i><b>vmax</b></i> = toma el 1% del valor del viewport que sea más grande</p>
+    <p><i><b>min-width</b></i> = indica el ancho mínimo que debe alcanzar el elemento</p>
+    <p><i><b>max-width</b></i> = indica el ancho máximo que debe alcanzar un elemento</p>
+    <p><i><b>min-higth</b></i> = indica el alto mínimo que debe alcanzar el elemento</p>
+    <p><i><b>max-heigth</b></i> = indica el alto máximo que debe alcanzar un elemento</p>
+
+
+
+    <h2>Medidas <i>em</i> y <i>rem</i></h2>
+
+    <ul>
+        <li><i><b>rem</b></i> Corresponde a la medida de la letra <i>'m'</i> de la raíz del documento (html)</li>
+        <li><i><b>em</b></i> Corresponde a la medida de la letra <i>'m'</i> del contexto donde nos encontramos</li>
+        <li>El estandar del tamaño de fuente por defecto en la raiz del documento es <i><b>16px</b></i>, no se recomienda modificarlo</li>
+    </ul>
+
+
+
+
+    <h2>width <i>%</i> y width <i>auto</i></h2>
+
+    <ul>
+        <li><i><b>%</b></i> Determina cuál es el ancho total que quiero en el box</li>
+        <li>A esta medida le afectará el <i>margin</i> aplicado al box, y a que se desbordará</li>
+        <li><i><b>auto</b></i> ajusta el ancho del box de acuerdo a los márgenes establecidos en el CSS</li>
+    </ul>
+    
+    
+    
+    <h2>heigth <i>%</i> y heigth <i>auto</i></h2>
+    
+    <ul>
+        <li><i><b>%</b></i> Determina cuál es el alto total de acuerdo al contenido, es decir, es el alto del contenido el que determina la altura de la caja</li>
+        <li>para poder dar un '%' a las cajas contenidas, la cja contenedora debe tener declarado el 'higth'</li>
+    </ul>
+    
+    <br><br><br>
+
+        <div class="contenedor">
+            <div class="interior interior1">div1</div>
+            <div class="interior interior2">div2</div>
+            <div class="interior interior3">div3</div>
+        </div>
+    
+        <p>otra forma de poner el <i> footer</i> pegado al margen inferior es:</p>
+
+        <pre>
+            body{
+                position: relative;
+                margin: 0;
+                min-heigth: 100vh;
+            }
+
+            footer{
+                position: absolute;
+                bottom: 0;
+            }
+        </pre>
+    
+    
+</body>
+</html>
