@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="chrome" />
+    <meta name="description" content="Cómo utilizar grid layout" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/grid-layout.css" />
+    <title>Grid Layout</title>
+  </head>
+  <body>
+    <h1>Grid Layout</h1>
+
+    <h2>Grid Container</h2>
+    <p>Elemento padre principal que va a contener un</p>
+    <pre>
+        etiqueta{
+            display: grid;
+        }
+    </pre>
+    <p>y los hijos que van a ser</p>
+    <pre>
+        etiqueta{
+            display:grid-items
+        }
+    </pre>
+
+    <h2>Grid Line</h2>
+    <p>
+      Son todas aquellas líneas, tanto horizontales como verticales, internas y
+      externas, que componen un <i>'grid'</i>
+    </p>
+
+    <h2>Grid Track</h2>
+    <p>Es el espacio que hay entre dos lineas adyacentes, filas o columnas</p>
+
+    <h2>Grid Cell</h2>
+    <p>Es el espacio que hay entre dos filas y dos columnas adyacentes</p>
+
+    <h2>Grid Area</h2>
+    <p>
+      Espacio que rodean 4
+      <i
+        >'grid lines' sin importar el número de <i>'grid cell'</i> que
+        contenga</i
+      >
+    </p>
+
+    <br /><br />
+
+    <h2>Trabajando con <i>grid container</i></h2>
+
+    <br /><br />
+
+    <ul>
+      <li>Definimos el contenedor padre y le asignamos una clase</li>
+      <li>definimos los contenedores hijos y les asignamos una clase</li>
+      <li>
+        Definimos valores para los contendeores hijos para poder identificarlos
+        fácilmente
+      </li>
+      <li>
+        le damos las siguientes propiedades y valores al contenedor padre. Esto
+        me divide el contenedor en columnas
+        <pre>
+                .container{
+                    display: grid;  /* Damos la caracteristica grid al contenedor*/
+                    grid-template-columns: 200px 200px 200px;   /* Definimos la cantidad de comumnas y el tamaño de las mismas*/
+                
+                }
+            </pre
+        >
+      </li>
+      <li>
+        le damos las siguientes propiedades y valores al contenedor padre. Esto
+        me divide el contenedor en filas
+        <pre>
+                .container{
+                    display: grid;  /* Damos la caracteristica grid al contenedor*/
+                    grid-template-rows: 200px 200px 200px;   /* Definimos la cantidad de filas y el tamaño de las mismas*/
+                
+                }
+            </pre
+        >
+      </li>
+      <li>
+        para reunir el tamaño de filas / columnas en una sola línea utilizamos
+        <pre>
+
+                .container{
+                    display: grid;  /* Damos la caracteristica grid al contenedor*/
+                    grid-template: 100px 200px 300px / 25% 100px 35%; /* Definimos filas / columnas */
+                
+                }
+                
+            </pre
+        >
+      </li>
+      <li>otras opciones de 'display son 
+        <pre>
+            etiqueta{
+                display: subgrid;
+                display inline-grid;
+            }
+        </pre>
+        no funcionales por el momento
+      </li>
+      <li>para dar espaciado a las celdas utilizamos la propiedad <i>'gap'</i>
+        <pre>
+            etiqueta{
+                column-gap: 5px;   /* asigna espaciado (margen) vertical, entre columnas */
+                row-gap: 5px;  /* asigna espaciado (margen) horizontal, entre filas */
+                gap: 5px 10px;  /* filas - columnas */
+            }
+        </pre>
+        esta propiedad debe ser aplicada al contenedor padre
+      </li>
+      <li>Para trabajar con <i>'grid'</i> tenemos una nueva unidad de medida que es la <b>fracción <i>fr</i></b></li>
+      <li>la fracción toma el espacio disponible y lo divide en las <i>'fr'</i>  en partes iguales</li>
+      <li>para evitar escribir muchos 'fr ' para dividir columnas o filas podemos utilizar la función <b><i>repeat()</i></b> en la propiedad <i>'grid-template' indicándole en la primera posición el número de filas o columnas y en la segunda posición el tamaño en <i><b>'fr'</b></i></i>
+        <pre>
+          etiqueta{
+              display: grid;
+              grid-template: 200px 20% 100px / repeat(4, 1fr);
+          }
+        </pre>
+      </li>
+      <li>además podemos decirle un tamaño <i>min</i> y <i>max en que funcionará 'fr'</i> de acuerdo el tamaño de la pantalla
+      <pre>
+        etiqueta{
+          display: grid;
+          grid-template: 200px 20% 100px / minmax(200px, 1fr)1fr 1fr 1fr;
+        }
+
+        etiqueta{
+          display: grid;
+          grid-template: 200px 20% 100px / repeat(4, minmax(200px, 1fr));
+        }
+      </pre>
+      </li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+    </ul>
+
+    <h3>Definiendo Columnas</h3>
+    <br />
+
+    <section class="container">
+      <div class="item">Contenido # 1</div>
+      <div class="item">Contenido # 2</div>
+      <div class="item">Contenido # 3</div>
+      <div class="item">
+        <div class="item">subitem #1</div>
+        <div class="item">subitem #2</div>
+        <div class="item">subitem #3</div>
+        <div class="item">subitem #4</div>
+        <div class="item">subitem #5</div>
+      </div>
+      <div class="item">Contenido # 5</div>
+      <div class="item">Contenido # 6</div>
+      <div class="item">Contenido # 7</div>
+      <div class="item">Contenido # 8</div>
+      <div class="item">Contenido # 9</div>
+      <div class="item">Contenido # 10</div>
+      <div class="item">Contenido # 11</div>
+      <div class="item">Contenido # 12</div>
+    </section>
+
+    <br /><br />
+  </body>
+</html>

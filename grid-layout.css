@@ -1,0 +1,36 @@
+*{
+    margin: 0;
+}
+
+body{
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.container{
+    display: grid;  /* Damos la caracteristica grid al contenedor*/
+/*    grid-template-columns: 200px 200px 200px;   /* Definimos la cantidad de comumnas y el tamaño de las mismas
+    grid-template-rows: 300px 30%;    /* Definimos el alto de las columnas */
+    grid-template: 300px 100px 100px / 1fr 1fr 1fr; /* Definimos filas / columnas */
+    /* row-gap: 5px;
+    column-gap: 5px; */
+    gap: 5px 10px;
+
+}
+
+.item{
+    background: lightblue;
+    padding: 10px;
+    border: 1px solid red;
+}
+
+.item:nth-of-type(4){   /* 'nth-of-type(4)' me permite tomar el elemento con la clase descrita y posición específica */
+    background: blue;
+    overflow: auto;
+    display: grid;
+    grid-template: 50px 50px 50px / 150px 150px 150px; /* Definimos filas / columnas */
+
+}
+
+.item .item{
+    background: yellow;
+}
