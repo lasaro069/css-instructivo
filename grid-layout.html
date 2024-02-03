@@ -138,12 +138,74 @@
         }
       </pre>
       </li>
-      <li></li>
-      <li></li>
-      <li></li>
-      <li></li>
+      <li>para manejar el contenido implícito, es decir, las cajitas sobrantes, utilizamos la propiedad <i>grid-auto-flow: row</i> que es el valor por defecto y los apila en una fila</li>
+      <li><i>grid-auto-flow: column</i> se apilan ea manera de columna ocupando el espacio estricto</li>
     </ul>
 
+    <pre>
+      .contenedor{
+        grid-auto-flow: row /* apila los elementos en filas*/
+      }
+
+      .contenedor{
+        grid-auto-flow: column /* apila los elementos en una columnas*/
+      }
+      
+      .contenedor{
+        grid-auto-columns: tamaño de las columnas /* asigna tamaño a las columnas implícitas*/
+      }
+
+      .contenedor{
+        grid-auto-rows: tamaño filas /* asigna tamaño a las filas de los elementos implícitos*/
+      }
+      
+      
+    </pre>
+
+    <h3>Alineacion de filas y columnas</h3>
+
+    <p>para alineación de columnas (vertical):</p>
+    <p>Utilizamos la propiedad <i><b>justify-content</b></i> con los siguientes valores</p>
+    <ul>
+      <li>
+        <pre>
+          .contenedor{
+            justify-content: center;  /* centra el contenido en la pantalla*/
+          }
+        </pre>
+      </li>
+      <li>
+        <pre>
+          .contenedor{
+            justify-content: start;  /* alinea el contenido al lado izquierdo*/
+          }
+        </pre>
+      </li>
+      <li>
+        <pre>
+          .contenedor{
+            justify-content: end;  /* alinea el contenido a la derecha*/
+          }
+        </pre>
+      </li>
+      <li>
+        <pre>
+          .contenedor{
+            justify-content: space around;  /* distribuye el contendio de las columnas*/
+          }
+        </pre>
+      </li>
+      <li>
+        <pre>
+          .contenedor{
+            justify-content: space-evenly;  /* */
+          }
+        </pre>
+      </li>
+    </ul>
+
+    
+    <br><br><br>
     <h3>Definiendo Columnas</h3>
     <br />
 
@@ -169,5 +231,109 @@
     </section>
 
     <br /><br />
+
+    <h3>Definiendo areas</h3>
+    <br />
+    <p>Para este ejercicio, la primera fila será el <i><b>'header'</b></i>, la segunda el <i><b>'body'</b></i> y la tercera el <i><b>'footer'</b></i></p>
+
+    <p>Para esto, utilizamos la propiedad <i><b>'grid-template-areas'</b></i></p>
+
+    <pre>
+            
+      .contenedor{
+        display: grid;
+        grid-template: repeat(3, 1fr) / repeat(4, 1fr);
+        gap: 10px;
+        height: 100vh;
+        grid-template-areas: "header header"  /* nombramos la primera fila y por cada columna escribimos un nombre */
+                              "left contenido"
+                              "footer footer";
+      }
+    </pre>
+
+    <p>Para los contenedores hijos les damos una clase con los nombres de cada area: 'header', 'left', 'contenido', 'footer' y le coloccamos la porpiedad <i><b>grid-area</b></i></p>
+    <pre>
+      .header{
+        grid-area: header;
+      }
+    </pre>
+
+
+    <h3>Poner nombres a las líneas</h3>
+    <br />
+    <p>Podemos poner nombres a las líneas tanto horizontales como verticales con el fin de poder identificarlas mejor.
+      <p>Puede dársele cualquier nombre, por ejemplo [inicio], [fin], [inicioBody]</p>
+
+    <p>Para esto, utilizamos la propiedad <i><b>'grid-template-columns'</b></i> y <i><b>'grid-template-rows'</b></i></p>
+
+    <pre>
+            
+      .contenedor{
+        display: grid;
+        grid-template-columns: [inicio] 1fr [linea2] 1fr [linea3] 1fr [fin];
+        gap: 10px;
+        height: 100vh;
+      }
+
+      .hijo:nth-of-type(n){
+        grid-column: inicio / linea3
+      }
+    </pre>
+
+    <p>Para los contenedores hijos les damos una clase con los nombres de cada area: 'header', 'left', 'contenido', 'footer' y le coloccamos la porpiedad <i><b>grid-area</b></i></p>
+    <pre>
+      .header{
+        grid-area: header;
+      }
+    </pre>
+
+    
+    
+    <section class="contenedor">
+      <div class="cajita header">header</div>
+      <div class="cajita left">left</div>
+      <div class="cajita contenido">contenido</div>
+      <div class="cajita footer">footer</div>
+    </section>
+
+    <br><br><br>
+
+
+
+    <h3>Tamaño de item en columnas</h3>
+    <br />
+
+    <section class="tamano">
+      <div class="item-tamano">Contenido # 1</div>
+      <div class="item-tamano">Contenido # 2</div>
+      <div class="item-tamano">Contenido # 3</div>
+      <div class="item-tamano">Contenido # 4</div>
+      <div class="item-tamano">Contenido # 5</div>
+      <div class="item-tamano">Contenido # 6</div>
+      <div class="item-tamano">Contenido # 7</div>
+      <div class="item-tamano">Contenido # 8</div>
+      <div class="item-tamano">Contenido # 9</div>
+      <div class="item-tamano">Contenido # 10</div>
+      <div class="item-tamano">Contenido # 11</div>
+      <div class="item-tamano">Contenido # 12</div>
+    </section>
+
+<br><br><br>
+
+    <h3>ejercicio</h3>
+    <br />
+
+    <section class="ejercicio">
+      <div class="item-ejercicio">Contenido # 1</div>
+      <div class="item-ejercicio">Contenido # 2</div>
+      <div class="item-ejercicio">Contenido # 3</div>
+      <div class="item-ejercicio">Contenido # 4</div>
+      <div class="item-ejercicio">Contenido # 5</div>
+    </section>
+
+
+
+
+
   </body>
 </html>

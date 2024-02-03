@@ -6,6 +6,9 @@ body{
     font-family: Arial, Helvetica, sans-serif;
 }
 
+
+/*  *****  DEFINIENDO COLUMNAS  *****  */
+
 .container{
     display: grid;  /* Damos la caracteristica grid al contenedor*/
 /*    grid-template-columns: 200px 200px 200px;   /* Definimos la cantidad de comumnas y el tamaño de las mismas
@@ -33,4 +36,120 @@ body{
 
 .item .item{
     background: yellow;
+}
+
+/*  *****  DEFINIENDO AREAS  *****  */
+
+.contenedor{
+    display: grid;
+    grid-template: 100px 1fr 150px / 200px 1fr;
+    gap: 10px;
+    height: 100vh;
+    grid-template-areas: "header header"
+                         "left contenido"
+                         "footer footer";
+}
+
+.cajita{
+    background: lightblue;
+    padding: 10px;
+    border: 1px solid red;
+}
+
+.cajita:nth-of-type(4){   /* 'nth-of-type(4)' me permite tomar el elemento con la clase descrita y posición específica */
+    background: blue;
+    overflow: auto;
+    display: grid;
+    grid-template: 50px 50px 50px / 150px 150px 150px; /* Definimos filas / columnas */
+}
+
+.cajita .cajita{
+    background: yellow;
+}
+
+.header{
+    grid-area: header;
+}
+
+.left{
+    grid-area: left;
+
+}
+
+.contenido{
+    grid-area: contenido;
+
+}
+
+.footer{
+    grid-area: footer;
+
+}
+
+/*  *****TAMAÑO ITEM EN COLUMNAS*****  */
+
+.tamano{
+    display:grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(4, 1fr);
+    gap: 10px;
+    height: 100vh;
+}
+
+
+.item-tamano:nth-of-type(1){   /* 'nth-of-type(4)' me permite tomar el elemento con la clase descrita y posición específica */
+    background: blue;
+    overflow: auto;
+    grid-column-start: 1;   /* indica en qué línea inicia la union de las columnas*/
+    grid-column-end: 3; /* indica en que línea termina la unión de las columnas*/
+}
+
+.item-tamano:nth-of-type(7){
+    grid-column: 2 / 4;
+}
+
+.item-tamano:nth-of-type(8){
+    grid-column: 1 / -1;
+}
+
+
+.item-tamano:nth-of-type(11){
+    grid-column: 1 / -1;    /* toma todo el ancho de la fila*/
+}
+
+.item-tamano{
+    background: lightskyblue;
+    padding: 10px;
+    border: 1px solid red;
+}
+
+/*  *****EJERCICIO***** */
+
+.ejercicio{
+    display:grid;
+    grid-template-columns: repeat(7, 1fr);
+    grid-template-rows: repeat(2, 200px);
+    gap: 5px;
+    height: 100vh;
+
+}
+
+.item-ejercicio{
+    background: lightskyblue;
+    padding: 10px;
+    border: 1px solid red;
+}
+
+.item-ejercicio:nth-of-type(1){
+    grid-column: 1 / span 3;
+    grid-row: 1 / span 2;
+}
+
+.item-ejercicio:nth-of-type(2){
+    grid-column: 4 / span 2;
+    grid-row: 1 / span 2;
+}
+
+.item-ejercicio:nth-of-type(3){
+    grid-column: 6 / span 2;
 }
