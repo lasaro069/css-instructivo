@@ -191,20 +191,148 @@
       <li>
         <pre>
           .contenedor{
-            justify-content: space around;  /* distribuye el contendio de las columnas*/
+            justify-content: space around;  /* distribuye el contendio de las columnas  con el espaciado indicado. Hay que tener en cuenta que en este caso, el espaciado entre dos items será igual a la suma del espaciado de los items.*/
           }
         </pre>
       </li>
       <li>
         <pre>
           .contenedor{
-            justify-content: space-evenly;  /* */
+            justify-content: space-evenly;  /* disptribuye homogeneamente el espacio */
+          }
+        </pre>
+      </li>
+      <li>
+        <pre>
+          .contenedor{
+            justify-content: space-between;  /* agrega espacio únicamente entre los elementos */
           }
         </pre>
       </li>
     </ul>
 
+    <p>para alineación de filas (horizontal):</p>
+    <p>Utilizamos la propiedad <i><b>align-content</b></i> con los siguientes valores</p>
     
+    <ul>
+      <li>
+        <pre>
+          .contenedor{
+            align-content: space-between;  /* agrega espaciado únicamente entre los elementos */
+          }
+        </pre>
+
+      </li>
+      <li>
+        <pre>
+          .contenedor{
+            align-content: space-evenly;  /* agrega espacio alrededor de los elementos */
+          }
+        </pre>
+
+      </li>
+      <li>
+        <pre>
+          .contenedor{
+            align-content: space-end;  /* alinea el contenido al margen inferior */
+          }
+        </pre>
+
+      </li>
+      <li>
+        <pre>
+          .contenedor{
+            align-content: center;  /* alinea el contenido verticalmente al centro del espacio */
+          }
+        </pre>
+
+      </li>
+    </ul>
+
+    <br><br><br>
+
+    
+    <h3>Alineacion de contendio</h3>
+
+    <p>para alineación del contenido de forma horizontal </p>
+    <p>Utilizamos la propiedad <i><b>justify-items</b></i> con los siguientes valores</p>
+    <ul>
+      <li>
+        <pre>
+          .contenedor{
+            justify-items: start;  /* coloca el contenido hacia la izquierda, al inicio, solo ocupan el ancho estricot*/
+          }
+        </pre>
+      </li>
+      <li>
+        <pre>
+          .contenedor{
+            justify-items: end;  /* alinea el contenido al lado derecho*/
+          }
+        </pre>
+      </li>
+      <li>
+        <pre>
+          .contenedor{
+            justify-items: center;  /* alinea el contenido al centro*/
+          }
+        </pre>
+      </li>
+      <li>
+        <pre>
+          .contenedor{
+            justify-items: stretch;  /* estira el contenido al espacio asignado por el grid*/
+          }
+        </pre>
+      </li>
+    </ul>
+
+    <p>para alineación vertical:</p>
+    <p>Utilizamos la propiedad <i><b>align-items</b></i> con los siguientes valores</p>
+    
+    <ul>
+      <li>
+        <pre>
+          .contenedor{
+            align-items: start;  /* alinea los elementos al margen superior */
+          }
+        </pre>
+
+      </li>
+      <li>
+        <pre>
+          .contenedor{
+            align-items:end;  /* alinea los elementos a la linea inferior */
+          }
+        </pre>
+
+      </li>
+      <li>
+        <pre>
+          .contenedor{
+            align-items: center;  /* alinea el contenido al centro */
+          }
+        </pre>
+
+      </li>
+      <li>
+        <pre>
+          .contenedor{
+            align-items: stretch;  /* estira los elementos an todo el alto del esapacio del grid */
+          }
+        </pre>
+
+      </li>
+      <li>si se quisiera alinear un item de manera independiente, se utilizaría la propiedad
+        <pre>
+          .item:nth-of-type(numero del item){
+            align-self: ;
+            justify-self: ;
+          }
+        </pre>
+      </li>
+    </ul>
+
     <br><br><br>
     <h3>Definiendo Columnas</h3>
     <br />
