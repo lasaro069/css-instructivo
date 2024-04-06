@@ -1,0 +1,46 @@
+.cabecera__container{
+    display: flex; /*   convierte los elementos hijos de bloque en elementos de linea  */
+
+    justify-content: space-between; /*  alinea los items de manera horizontal con espaciado igaul en todos los elementos    */
+
+    align-items: center;    /*  Centralos elementos de manera vertical  en el contenedor padre*/
+
+    position: fixed;    /*  Define en qué posición se va  a ubicar el elemento padre*/
+
+    top: 0; /*  fija el elemento padre en el borde superior de la págna     */
+
+}
+
+.cabecera__buscar__item{
+    display: none;  /*  Hace que la barra de búsqueda se oculte*/
+}
+
+
+
+/*  PIE DE PÁGINA   */
+
+.rodapie__container{
+    display: flex;  /*  ubica los elementos de bloque como elementos de linea*/
+
+    flex-direction: column; /*  coloca los elementos en columna, uno debajo del otro*/
+
+    flex-wrap: wrap;    /*  'wrap' ajusta las columnas al ancho de la pantalla del dispositivo  */
+
+    /* La propiedad 'flex-flow: column wrap;' realiza las dos últimas acciones anteriores en una sola línea */
+}
+
+
+/*  VISUALIZACION RESPONSIVA    */
+
+/*  El diseño responsive debe realizarse desde la pantalla más pequeña hasta la pantalla más grande, a este orden se le conoce como 'FIRTS MOBILE'  */
+
+@media (min-width: 834px) {
+    .cabecera__buscar__item{
+        display: block; /*  Este atributo hace que, mientras el tamaño horizontal de la pantalla sea menor a la condición siga oculta la barra de búsqueda, llegado al tamaño mínimo, es decir a partir de 834px, se visualizará la barra de búsqueda*/
+    }
+
+    .rodapie__container{
+        justify-content: space-between;
+    }
+        
+}
