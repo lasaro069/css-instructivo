@@ -16,6 +16,11 @@
 }
 
 
+.superior__seccion__container{
+    display: flex;
+    align-items: center;
+}
+
 
 /*  PIE DE PÁGINA   */
 
