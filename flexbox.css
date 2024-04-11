@@ -16,9 +16,101 @@
 }
 
 
+/*  TRABAJAMOS EL ASIDE O MENÚ LATERAL PARA DISPOSITIVOS MÓVILES    */
+
+
+.menu__container{
+    position: fixed;    /*  Ubica el contenedor en una posición fija, por defecto al margen superior izquierdo */
+    bottom: 0%; /*  Ubica el contenedor en el margen inferior*/
+    height: 75px;   /*  definimos la altura del contenedor*/
+    width: 100%;    /*  abarca el ancho total de la pantalla*/
+}
+
+/*   para organizar horizontalmente los elementos, acudimos al contenedor de listas 'UL'   */
+.menu__lista{
+    display: flex;  /*   convierte los elementos hijos de bloque en elementos de linea  */
+    justify-content: space-around;  /*  Disptibuye uniformemente el espacio entre elementos*/
+    height: 100%;
+
+
+}
+
+.menu__lista li{
+    align-self: center;
+}
+
+.menu__itens{
+    display: flex;   /*   convierte los elementos hijos de bloque en elementos de linea  */
+    flex-direction: column; /*  Ubicamos los items en columnas  */
+    gap: 5px;   /*  Damos espaciado vertical entre los dos items */
+}
+
+
+/*   con 'nth-child podemos manipular los elementos hermanos independientemente, en este caso ocultar los últimos tres elementos hermanos   */
+.menu__lista:nth-child(2),
+.menu__lista:nth-child(3),
+.menu__lista:nth-child(4){
+    display: none;
+}
+
+
+
+
+ 
+@media (min-width: 834px) { 
+    
+    
+
+    .menu__container{
+        position: fixed;    /*  Ubica el contenedor en una posición fija, por defecto al margen superior izquierdo */
+        left: 0%; /*  Ubica el contenedor en el margen inferior*/
+        height: 100%;   /*  definimos la altura del contenedor*/
+        width: 74px;    /*  abarca el ancho total de la pantalla*/
+    }
+    
+    /*   para organizar horizontalmente los elementos, acudimos al contenedor de listas 'UL'   */
+    .menu__lista{
+        display: flex;  /*   convierte los elementos hijos de bloque en elementos de linea  */
+        flex-wrap: wrap;    /*  'wrap' ajusta las columnas al ancho del contenedor  */
+        justify-content: space-around;  /*  Disptibuye uniformemente el espacio entre elementos*/
+        width: 100%;
+    
+    
+    }
+    
+    .menu__lista li{
+        align-self: center;
+    }
+    
+    .menu__itens{
+        display: flex;   /*   convierte los elementos hijos de bloque en elementos de linea  */
+        flex-direction: column; /*  Ubicamos los items en columnas  */
+        gap: 5px;   /*  Damos espaciado vertical entre los dos items */
+    }
+    
+    
+    /*   con 'nth-child podemos manipular los elementos hermanos independientemente, en este caso ocultar los últimos tres elementos hermanos   */
+    .menu__lista:nth-child(2),
+    .menu__lista:nth-child(3),
+    .menu__lista:nth-child(4){
+        display: none;
+    }
+    
+    
+
+
+}
+
+
+
+/*  MENU SUPERIOR   */
+
 .superior__seccion__container{
-    display: flex;
-    align-items: center;
+    display: flex;  /*   convierte los elementos hijos de bloque en elementos de linea  */
+    align-items: center;    /*  Centralos elementos de manera vertical  en el contenedor padre*/
+    white-space: nowrap;    /* Evita que el texto se quiebre, quedará en una sola línea */
+    overflow: scroll;   /*  Agrega una barra de desplazamiento en la barra */
+    gap: 15px;  /*  Agrega espacio entre los items*/
 }
 
 
@@ -29,7 +121,7 @@
 
     flex-direction: column; /*  coloca los elementos en columna, uno debajo del otro*/
 
-    flex-wrap: wrap;    /*  'wrap' ajusta las columnas al ancho de la pantalla del dispositivo  */
+    flex-wrap: wrap;    /*  'wrap' ajusta las columnas al ancho del contenedor  */
 
     /* La propiedad 'flex-flow: column wrap;' realiza las dos últimas acciones anteriores en una sola línea */
 }
