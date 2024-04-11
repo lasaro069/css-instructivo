@@ -72,7 +72,7 @@
     .menu__lista{
         display: flex;  /*   convierte los elementos hijos de bloque en elementos de linea  */
         flex-wrap: wrap;    /*  'wrap' ajusta las columnas al ancho del contenedor  */
-        justify-content: space-around;  /*  Disptibuye uniformemente el espacio entre elementos*/
+        justify-content:first baseline;  /*  Disptibuye uniformemente el espacio entre elementos*/
         width: 100%;
     
     
@@ -140,4 +140,58 @@
         justify-content: space-between;
     }
         
+}
+
+
+
+/*  AGREGAMOS TAMAÑO RESPONSIVE DE 1440PX PARA EL ASIDE */
+
+@media (min-width: 1440px) {
+    
+    /* declaramos el ancho del container*/
+    .menu__container{
+        width: 239px;
+        overflow: scroll;   /* crea una barra de desplazamiento para el aside*/
+    }
+
+    /*  cambiamos el menu__lisa de 'none' a 'flex' para que sea visible*/
+    .menu__lista:nth-child(2),
+    .menu__lista:nth-child(3),
+    .menu__lista:nth-child(4){
+        display: flex;
+    }
+
+    /* le damos una altura automática para que puedan visualizarse*/
+    .menu__lista{
+        height: auto;
+        padding: 20px 17px 20px 17px;   /* ajustamos el ancho de los contenedores para que la sombra no aparezca en todo el contenedor*/
+        gap: 15px;
+    }
+
+    /* para cambiar el orden de los elementos del tercer contenedor del aside aplicamos 'flex-direction'*/
+    .menu__lista:nth-child(3){
+        flex-direction: column-reverse;
+    }
+
+
+
+    .menu__itens{
+        flex-direction: row;    /* ubica los hijos del contenedor padre en filas*/
+        gap: 15px;  /* Crea un espacio entre los iconos*/
+        align-items: center;
+    }
+
+    
+    .videojuegos{
+        order: 3;
+    }
+
+    .peliculas{
+        order: 2;
+    }
+
+    .premium{
+        order: 1;
+    }
+
 }
